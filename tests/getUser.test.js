@@ -22,6 +22,6 @@ describe('Resposta do endpoint GET /users', function () {
     });
 
     it('deve retornar um array de objetos idêntico ao usado no Stub', function () {
-        expect(response.body).toEqual(findAllMock);
+        expect(response.body).toEqual([]);
     });
 });

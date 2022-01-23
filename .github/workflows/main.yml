@@ -19,7 +19,7 @@ jobs: # nome para rodar as ações no github, nome obrigatório
         - name: instalando as dependencias
           run: npm install # Executar comando CLI
 
-        - name: executando o lint para verificar se a erros
+        - name: executando o lint para verificar se há erros
           run: npx eslint .
 
   jest-test:
