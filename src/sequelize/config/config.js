@@ -27,5 +27,5 @@ module.exports = {
     host: HOST,
     port: DB_PORT,
     dialect: 'postgres',
-  }
-}
+  },
+};
