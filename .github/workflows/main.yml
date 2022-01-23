@@ -1,0 +1,42 @@
+on: [push] # Todo push, essa ação será executada
+# on: [push, pull_request] Todo push ou pull_request, essa ação será executada
+
+jobs: # nome para rodar as ações no github, nome obrigatório
+  eslint: # nome que faça sentido para sabermos do que a action se trata
+
+    runs-on: ubuntu-latest # qual a versão da máquina a ser utilizada na action
+
+    steps: #Lista de passos para executar os comandos
+        - name: Verifica o repositorio do Git # nome da ação específica
+          uses: actions/checkout@v2 # action que baixa e executa seu repo, permitindo as ações a seguir possam ser realizadas - indispensável
+
+        - name: Instala o node com a versão
+          uses: actions/setup-node@v1 # Ação para a configuração do node
+          with:
+            node-version: 14 # qual versão do node iremos utilizar
+
+
+        - name: instalando as dependencias
+          run: npm install # Executar comando CLI
+
+        - name: executando o lint para verificar se há erros
+          run: npx eslint .
+
+  jest-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Verifica o repositorio do Git
+          uses: actions/checkout@v2
+
+        - name: Instala o node com a versão
+          uses: actions/setup-node@v1
+          with:
+            node-version: 14
+
+        - name: instalando as dependencias
+          run: npm install
+
+        - name: executando os testes para verificar se há erros
+          run: npm test
