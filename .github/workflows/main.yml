@@ -1,6 +1,6 @@
 on: [push, pull_request] # Todo push ou pull_request, essa ação será executada
 
-batata:
+jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
