@@ -21,7 +21,6 @@ jobs: # nome para rodar as ações no github, nome obrigatório
 
         - name: executando o lint para verificar se a erros
           run: npx eslint .
-          eslint: # nome que faça sentido para sabermos do que a action se trata
 
   jest-test:
 
