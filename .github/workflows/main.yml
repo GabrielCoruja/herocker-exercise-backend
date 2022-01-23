@@ -1,4 +1,5 @@
-on: [push, pull_request] # Todo push ou pull_request, essa ação será executada
+on: [push] # Todo push, essa ação será executada
+# on: [push, pull_request] Todo push ou pull_request, essa ação será executada
 
 jobs: # nome para rodar as ações no github, nome obrigatório
   eslint: # nome que faça sentido para sabermos do que a action se trata
